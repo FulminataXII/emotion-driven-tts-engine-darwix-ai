@@ -22,8 +22,8 @@ Follow the steps below to run it.
 Clone the repository and initialize a virtual environment:
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/FulminataXII/emotion-driven-tts-engine-darwix-ai
+cd emotion-driven-tts-engine-darwix-ai
 
 python -m venv venv
 # On macOS/Linux:
