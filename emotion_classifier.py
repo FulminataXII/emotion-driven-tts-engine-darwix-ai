@@ -22,22 +22,18 @@ def predict_emotion(classifier, text):
     """
     Passes the text to the model and extracts the predicted emotion.
     """
-    # The pipeline returns a list of lists when top_k is specified
     results = classifier(text)
     
-    # Extract the top result
     top_prediction = results[0][0]
     emotion = top_prediction['label']
     confidence = top_prediction['score']
     
     return emotion, confidence
 
-# --- Prototype Testing ---
+# --- Testing ---
 if __name__ == "__main__":
-    # 1. Initialize the model (Do this once at the start of your app)
     emotion_model = setup_classifier()
     
-    # 2. Test sentences covering different emotions
     test_sentences = [
         "I cannot believe this is happening. We need to do something about it right now!",
         "I just got the job offer! This is the best day of my life!",
@@ -46,7 +42,6 @@ if __name__ == "__main__":
         "The package will arrive on Tuesday between 9 AM and 5 PM."
     ]
     
-    # 3. Run the classifier loop
     for sentence in test_sentences:
         emotion, confidence = predict_emotion(emotion_model, sentence)
         
