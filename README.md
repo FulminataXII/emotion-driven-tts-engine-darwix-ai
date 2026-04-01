@@ -38,7 +38,7 @@ Ensure that the project directory is as follows:
 .
 ├── main.py                  # FastAPI application
 ├── emotion_classifier.py    # HF pipeline initialization
-├── tts_prototype.py         # GCP TTS client and SSML generation
+├── tts_part.py              # GCP TTS client and SSML generation
 ├── config.json              # Contains the prosody changes for each emotion
 └── static/
     └── index.html           # Minimal frontend UI
