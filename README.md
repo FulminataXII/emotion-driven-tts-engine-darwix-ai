@@ -110,8 +110,10 @@ Joy is associated with high volume and a slight increase in mean F0 (pitch).
 Sadness is associated with a decrease in all 3 considered prosodic elements. 
 
 Although the paper actually contains calculated data modelling the exact changes, their direct applicability on synthetic voices found in GCP is very minimal, as the base mean F0 and variance of F0, data crucial to calculate the exact shifts numerically, aren't available. Thus, their values are used to infer the relative changes of prosody among different emotions (for example that the increase in F0 is higher in fear than in anger, etc) and the final choice of the exact values are a result of both the study and extensive trial and error. The research paper also models the speech contour parameters and MFCCs, which can't be modelled using SSML or in fact any popular TTS engines as that level of micro control is usually left to the underlying Neural Networks than explicit programming.  
+
+  
 *Note: 1. Surprise is encoded to cause a significant increase in rate and moderate increase in pitch and loudness. This is based on my own observation and trial-and-error as the research paper didn't explicitly contain the emotion in its study.  
-2. Neutrality is encoded to have default values for all.*  
+       2. Neutrality is encoded to have default values for all.*  
 
 Further, when the text contains multiple sentences, <break/> tags are inserted in between with the least duration for fear, highest for sadness and values in between for others to reflect the rate of articulation values for them found in the study. 
 
